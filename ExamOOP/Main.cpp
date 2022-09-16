@@ -76,8 +76,14 @@ int main()
 
 							cout << "Input amount of purchase: ";
 							cin >> ival2;
-
-							BestAutos.addStaff(new Staff(s1, val1, s2, s3, s4, val2, ival2));
+							try
+							{
+								BestAutos.addStaff(new Staff(s1, val1, s2, s3, s4, val2, ival2));
+							}
+							catch (AllExceptions* obj)
+							{
+								obj->showWhat();
+							}
 							break;
 
 						case 2:
@@ -150,8 +156,14 @@ int main()
 
 							cout << "Input amount of purchase: ";
 							cin >> ival1;
-
-							BestAutos.addClient(new Client(s1, val1, s2, s3, s4, val2, ival1));
+							try
+							{
+								BestAutos.addClient(new Client(s1, val1, s2, s3, s4, val2, ival1));
+							}
+							catch (AllExceptions* obj)
+							{
+								obj->showWhat();
+							}
 							break;
 
 						case 2:
@@ -251,8 +263,14 @@ int main()
 							cout << "Input car class: ";
 							cin.ignore();
 							getline(cin, s6);
-
-							BA->add(new Car(s1, s2, s3, s4, s5, fval1, ival1, ival2, s6));
+							try
+							{
+								BA->add(new Car(s1, s2, s3, s4, s5, fval1, ival1, ival2, s6));
+							}
+							catch (AllExceptions* obj)
+							{
+								obj->showWhat();
+							}
 							break;
 
 						case 2:
@@ -287,8 +305,14 @@ int main()
 
 							cout << "Input amount of seats: ";
 							cin >> ival3;
-
-							BA->add(new Minivan(s1, s2, s3, s4, s5, fval1, ival1, ival2, s6, ival3));
+							try
+							{
+								BA->add(new Minivan(s1, s2, s3, s4, s5, fval1, ival1, ival2, s6, ival3));
+							}
+							catch (AllExceptions* obj)
+							{
+								obj->showWhat();
+							}
 							break;
 
 						case 3:
@@ -323,8 +347,14 @@ int main()
 
 							cout << "Input carrying weight: ";
 							cin >> fval2;
-
-							BA->add(new Lorry(s1, s2, s3, s4, s5, fval1, ival1, ival2, s6, fval2));
+							try
+							{
+								BA->add(new Lorry(s1, s2, s3, s4, s5, fval1, ival1, ival2, s6, fval2));
+							}
+							catch (AllExceptions* obj)
+							{
+								obj->showWhat();
+							}
 							break;
 
 						case 4:
@@ -355,8 +385,14 @@ int main()
 
 							cout << "Input amount of wheels: ";
 							cin >> ival3;
-
-							BA->add(new Motorcycle(s1, s2, s3, s4, s5, fval1, ival1, ival2, ival3));
+							try
+							{
+								BA->add(new Motorcycle(s1, s2, s3, s4, s5, fval1, ival1, ival2, ival3));
+							}
+							catch (AllExceptions* obj)
+							{
+								obj->showWhat();
+							}
 							break;
 
 						default: if (menu2 > 4 || menu2 != 0 || menu2 < 0) cout << "\tWrong menu item selected.\n"; break;
